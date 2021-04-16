@@ -1,0 +1,98 @@
+설계.
+1. 호버 될때 영문 텍스트 -> 한글 텍스트로 바뀜(위에서 아래로)
+2. 클릭했을때 하위 자식요소의 텍스트 들이 바뀜.
+
+$('.product_top_title_text').mouseover(function(){
+    // 호버된 this 자식의 첫번째 두번째 선택하기. 
+    // 코드를 이렇게 바꾸면 이 15줄로 3개의 div박스를 컨트롤 가능.
+    $(this).children(':nth-child(1)').css({'-webkit-transform':'translate(0,-150%)'})
+    $(this).children(':nth-child(1)').css({'opacity':'0'});
+    $(this).children(':nth-child(2)').css({'-webkit-transform':'translate(0,-150%)'})
+    $(this).children(':nth-child(2)').css({'opacity':'1'});
+});
+
+$('.product_top_title_text').mouseleave(function(){
+    $(this).children(':nth-child(1)').css({'-webkit-transform':'translate(0,0%)'})
+    $(this).children(':nth-child(1)').css({'opacity':'1'});
+    $(this).children(':nth-child(2)').css({'-webkit-transform':'translate(0,-60%)'})
+    $(this).children(':nth-child(2)').css({'opacity':'0'});
+});
+
+let first = $(".product_change_img_first img")
+let second = $(".product_change_img_second img")
+let third = $(".product_change_img_third img")
+let fourth = $(".product_change_img_fourth img")
+let fifth = $(".product_change_img_fifth img")
+let six = $(".product_change_img_six img")
+
+let first_text = $(".product_change_img_first p")
+let second_text = $(".product_change_img_second p")
+let third_text = $(".product_change_img_third p")
+let fourth_text = $(".product_change_img_fourth p")
+let fifth_text = $(".product_change_img_fifth p")
+let six_text = $(".product_change_img_six p")
+
+// 버튼 클릭 하면 제품 사진+이름 변경하기
+
+// 베스트 셀러 버튼
+$(".product_top_title_best_ko").click(function(){
+    first.attr("src","https://i.ibb.co/8mgns8X/e2e5e56d-1b4b-48c8-8873-e7e87aeb657a.png");
+    first_text.html("전초 폼클렌징");
+    second.attr("src","https://i.ibb.co/X2hzwCZ/111200039.png");
+    second_text.html("전초 컨센트레이트");
+    third.attr("src","https://i.ibb.co/3mCn3dK/111200041.png");
+    third_text.html("전초 에센셜크림");
+    fourth.attr("src","https://i.ibb.co/cg52YNw/111200008.png");
+    fourth_text.html("전초 안티에이징");
+    fifth.attr("src","https://i.ibb.co/2sJVTD2/111200005.png");
+    fifth_text.html("전초 리너싱");
+    six.attr("src","https://i.ibb.co/6DpXSvn/111200021.png");
+    six_text.html("전초 미스트");
+});
+
+// 에센셜 버튼
+$(".product_top_title_essential_ko").click(function(){
+    first.attr("src","https://i.ibb.co/XFHb0D1/f1ec4395-7bb3-4e2d-9cc1-068132c77b8e.png");
+    first_text.html("수분 진정 토너");
+
+    second.attr("src","https://i.ibb.co/XX3FqyG/111200013.png");
+    second_text.html("수분 진정 크림");
+
+    third.attr("src","https://i.ibb.co/0C7ryfd/5e40b0b3-e798-4baa-88ed-dda1d15efba2.png");
+    third_text.html("화이트닝 에센스");
+
+    fourth.attr("src","https://i.ibb.co/Hr08skf/330d7667-ae27-429d-901c-a7b429db0514.png");
+    fourth_text.html("리커버링");
+
+    fifth.attr("src","https://i.ibb.co/cJX6Tdn/78a5bb8d-b333-4cca-b962-10c87ef4ed92.png");
+    fifth_text.html("오버나이트");
+
+    six.attr("src","https://i.ibb.co/XX3FqyG/111200013.png");
+    six_text.html("자목숙 에센스");
+
+});
+
+// 바디 버튼
+$(".product_top_title_body_ko").click(function(){
+    first.attr("src","https://i.ibb.co/vskHQnc/2e0d3140-af6c-4dd1-b4c7-c354ff6ca8d5.png");
+    first_text.html("자목숙 토너");
+
+    second.attr("src","https://i.ibb.co/89VXmG5/c5a0301b-5193-40ae-bbd4-b216ce976361.png");
+    second_text.html("백년초 로션");
+
+    third.attr("src","https://i.ibb.co/TmYRxQJ/39c6e8c6-36f7-4ff2-b841-1481b766223d.png");
+    third_text.html("트리트먼트 토너");
+
+    fourth.attr("src","https://i.ibb.co/QJz2mFM/113c111c-7321-48f1-bc42-e1af397282a5.png");
+    fourth_text.html("화이트닝 앰플");
+
+    fifth.attr("src","https://i.ibb.co/4sr3xz7/b522d674-d763-480c-98d9-f85dc40e18c2.png");
+    fifth_text.html("선 프로텍션");
+
+    six.attr("src","https://i.ibb.co/4sr3xz7/b522d674-d763-480c-98d9-f85dc40e18c2.png");
+    six_text.html("미네랄 프로텍션");
+
+});
+
+***** 개선사항 *****
+1.텍스트를 바꿀때... 뭔가 지저분해 보임.. 알고리즘으로 개선할 필요 

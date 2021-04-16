@@ -1,0 +1,86 @@
+
+// 스크롤 값을 실시간으로 가져 오려면
+// scroll()펑션을 사용해야함
+// 스크롤 50마다 백그라운드 사이즈 1~0.5% 올리기 
+
+$(window).scroll(function(){
+    let scrollValue = $(document).scrollTop();
+     if(scrollValue > 500){
+        $('.flower_img_wrap').css('backgroundSize','101%,101%');
+    }
+    if(scrollValue > 550){
+        $('.flower_img_wrap').css('backgroundSize','102%,102%');
+    }
+    if(scrollValue > 600){
+        $('.flower_img_wrap').css('backgroundSize','103%,103%');
+    }
+    if(scrollValue > 650){
+        $('.flower_img_wrap').css('backgroundSize','104%,104%');
+    }
+    if(scrollValue > 680){
+        $('.flower_img_wrap').css('backgroundSize','104.5%,104.5%');
+    }
+
+     if(scrollValue > 700){
+        $('.flower_img_wrap').css('backgroundSize','105%,105%');
+    }
+    if(scrollValue > 750){
+        $('.flower_img_wrap').css('backgroundSize','106.5%,106.5%');
+    }
+    if(scrollValue > 850){
+        $('.flower_img_wrap').css('backgroundSize','107.5%,107.5%');
+    }
+    if(scrollValue > 900){
+        $('.flower_img_wrap').css('backgroundSize','108.5%,108.5%');
+    }
+    if(scrollValue > 950){
+        $('.flower_img_wrap').css('backgroundSize','109.5%,109.5%');
+    }
+    if(scrollValue > 1000){
+        $('.flower_img_wrap').css('backgroundSize','110.5%,110.5%');
+    }
+
+    if(scrollValue > 1050){
+        $('.flower_img_wrap').css('backgroundSize','111.5%,111.5%');
+    }
+
+     if(scrollValue > 1100){
+        $('.flower_img_wrap').css('backgroundSize','112.5%,112.5%');
+    }
+    if(scrollValue > 1150){
+        $('.flower_img_wrap').css('backgroundSize','113.5%,113.5%');
+    }
+    if(scrollValue > 1200){
+        $('.flower_img_wrap').css('backgroundSize','115.5%,115.5%');
+    }
+    if(scrollValue > 1250){
+        $('.flower_img_wrap').css('backgroundSize','118.5%,118.5%');
+    }
+    if(scrollValue > 1300){
+        $('.flower_img_wrap').css('backgroundSize','120%,120%');
+
+        setInterval(function(){
+            $(".flower_text_first h2").css('opacity','1');
+            $(".flower_text_first h2").css({"-webkit-transform":"translate(0%,0%)"});
+            $(".flower_text_first h2").css('transition','1s');
+        },900);
+
+        setInterval(function(){
+            $(".flower_text_first h1").css('opacity','1');
+            $(".flower_text_first h1").css({"-webkit-transform":"translate(0%,0%)"});
+            $(".flower_text_first h1").css('transition','1.2s');
+        },1000);
+
+        setInterval(function(){
+            $(".flower_text_second span").css('opacity','1');
+            $(".flower_text_second span").css({"-webkit-transform":"translate(0%,0%)"});
+            $(".flower_text_second span").css('transition','1.5s');
+        },1100);
+    }
+
+});
+
+***** 개선사항 *****
+1.중복이 너무 많음. 
+2. 알고리즘으로 코드를 다시 짤 
+스크롤, 올라가는 퍼센트 변수로 넣고 짜보면 될것같음... FOR문?..

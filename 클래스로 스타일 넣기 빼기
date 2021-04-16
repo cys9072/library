@@ -1,0 +1,55 @@
+<body>
+        <div class="hamburger" id="hamburger-6">
+        //스타일을 위한 클래스 line, js로 addClass할 Class is-active
+        
+              <div class="line is-active"></div>
+              <div class="line is-active"></div>
+              <div class="line is-active"></div>
+            </div>
+</body>
+<style>
+.hamburger .line{
+  width: 25px;
+  height: 3px;
+  background-color: #ecf0f1;
+  margin: 8px auto;
+ transition: all 0.3s ease-in-out;
+}
+
+#hamburger-6.is-active .line:nth-child(2) {
+  width:0px;
+}
+
+#hamburger-6.is-active .line:nth-child(1) {
+  transform: translateY(13px) rotate(-225deg);
+  transition-delay: 0.5s;
+}
+
+#hamburger-6.is-active .line:nth-child(3) {
+  transform: translateY(-9px) rotate(225deg);
+  transition-delay: 0.5s;
+}
+
+
+.hamburger:hover{
+  cursor: pointer;
+}
+</style>
+
+<script>
+    $(document).ready(function(){
+        $("#hamburger-6").click(function(){
+          $(this).toggleClass("is-active");
+        });
+      });
+</script>
+
+.toggleClass("is-active");로 인해 클릭 할 때 is-active가 추가되어서 스타일 시트에 있는 is-active가 추가되어서 스타일을 적용하고 
+한번더 클릭하면 이미 is-active 클래스가 있으므로 is-active를 가진 클래스 스타일은 빼버린다
+            
+            
+     
+            
+          
+          
+          
